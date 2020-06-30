@@ -1,20 +1,38 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<app-navigation-bar>
+
+</app-navigation-bar>
+<div style="text-align:center;margin: 70px 0px 40px 0px;" >
   <h1>
-    Welcome to {{ title }}!
+    Please Login before preceeding
   </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="login" >
+    <mat-card color="accent" class="example-card">
+      <mat-card-header class="login-header">
+        <mat-card-title><h3>Login</h3></mat-card-title>        
+      </mat-card-header>
+      <form [formGroup]="loginForm" (ngSubmit)="Login()">
+        <mat-card-content>
+          <img mat-card-image src="/assets/images/download.png"  alt="admin.png">
+        </mat-card-content>
+        <mat-card-content>
+          <mat-form-field [floatLabel]="auto">
+            <input matInput formControlName="email" required>
+            <mat-placeholder class="placeholder">email</mat-placeholder>
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-content>
+          <mat-form-field [floatLabel]="auto">
+            <input matInput class="input" formControlName="password" type="password" required>
+            <mat-placeholder class="placeholder">Password</mat-placeholder>
+            <mat-hint align="end" class="forgot-pass">forgot password?</mat-hint>
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-content>
+          <button  type="submit" mat-flat-button color="primary">Login</button>
+        </mat-card-content>
+      </form>
+    </mat-card>
+</div>
 

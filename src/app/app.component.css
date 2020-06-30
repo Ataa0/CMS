@@ -1,0 +1,51 @@
+.example-card {
+    width: 400px;
+    text-align: center;
+    border-radius: 5%;
+    background-color: white;
+    padding : 0px 0px 0px 0px;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+}
+
+.login-header{
+    display: flex;
+    justify-content: center;
+    margin: 0px 0px 3px 0px;
+    background-color: gray !important;
+    color : floralwhite;
+
+}
+.placeholder{
+    color: gray ;
+}
+
+.forgot-pass{
+    color: gray;
+}
+::ng-deep .mat-focused .placeholder{
+    color: #c2185b;
+}
+::ng-deep .mat-form-field-underline{
+    background-color:gray !important;
+}
+body{
+    background-color: beige;
+    color : black;
+}  
+form{
+    display: flex;
+    flex-flow: column;
+}
+mat-form-field{
+    color : black;
+}
+img,mat-card-image{
+    padding-top: 30px;
+    border-radius: 10% 10% 10% 10%;
+    height:100px;
+    width: auto;
+}

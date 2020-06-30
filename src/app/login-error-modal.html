@@ -1,0 +1,20 @@
+<div *ngIf="data.status">
+  <h1 style="justify-content: center;" mat-dialog-title>Welcome {{data.email}}!</h1>
+  <div mat-dialog-content>
+    <p>you are about to be redirected.</p>
+  </div>
+  <div mat-dialog-actions  style="justify-content: center;">
+    <button mat-button color = "" [mat-dialog-close]="data.animal" cdkFocusInitial>OK</button>
+  </div>
+</div>
+
+<div ng-hide="data.status" width="40%">
+  <h1 style="justify-content: center;" mat-dialog-title>Sorry {{data.email}}</h1>
+  <p>You are unauthorized!</p>
+  <div mat-dialog-content>
+    <p>emails or password is incorrect.</p>
+  </div>
+  <div mat-dialog-actions  style="justify-content: center;">
+    <button mat-button color = "" [mat-dialog-close]="data.animal" cdkFocusInitial>OK</button>
+  </div>
+</div>
